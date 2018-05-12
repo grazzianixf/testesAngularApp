@@ -7,8 +7,11 @@ json: {{user | json}}
 <br>
 <br>
 <!-- Rotas relativas não colocamos "/" na frente, senao vai ser entendido que é uma rota a partir da raiz -->
+<!-- O routerLinkActive indica a class que vai ser atribuida ao elemento quando aquele link estiver ativo/acessado na url do browser -->
 <a [routerLink]="['roles']" routerLinkActive="active-link">roles</a>
  | 
 <a [routerLink]="['todos']" routerLinkActive="active-link">TODOs</a>
 <br>
+<br>
+<!-- Eh feito o uso do router-outlet para indicar que as rotas filhas são inseridas aqui nesse ponto do templade html -->
 <router-outlet></router-outlet>

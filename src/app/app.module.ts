@@ -17,8 +17,9 @@ import { ToDosComponent } from './users/user/to-dos/to-dos.component';
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'user/:id', component: UserComponent,
+  {path: 'user/:id', component: UserComponent, //passagem de parametros
     children: [
+      //essa primeira entrada eh para qdo ja queremos mostrar um component filho (ex: roles) ao se chamar o componente pai (ex: user)
       {path: '', redirectTo: 'roles', pathMatch: 'full'},
       {path: 'roles', component: RolesComponent},
       {path: 'todos', component: ToDosComponent}
@@ -43,6 +44,7 @@ export const ROUTES: Routes = [
     FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
+  //usando o provider do appModule o serviço fica disponivel para toda a aplicação
   providers: [UserService],
   bootstrap: [AppComponent]
 })

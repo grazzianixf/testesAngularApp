@@ -9,6 +9,7 @@ import { User } from '../user';
 })
 export class UserDetailComponent implements OnInit {
 
+  //o decorator @Input indica que esse eh um parametro que esse componente recebe de quem o utilizar
   @Input() user: User;
 
   constructor() { }

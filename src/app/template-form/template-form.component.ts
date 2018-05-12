@@ -14,6 +14,7 @@ export class TemplateFormComponent implements OnInit {
   constructor(private route: ActivatedRoute, private userService: UserService) { }
 
   ngOnInit() {
+    //como exemplo fazemos o subscribe para um Observable que contem os usuarios obtidos no serviço, qdo eles sao obtidos eh atribuido ao atributo da classe
     this.userService.users().subscribe(
       (users) => {
         this.user = users[0]

@@ -1,3 +1,4 @@
-<p>
-  roles works!
-</p>
+<!-- O uso do Pipe com aync indica que a diretiva ngFor aguarde pelo "roles" que eh do tipo Observable -->
+<ul>
+  <li *ngFor="let role of roles | async">{{role.name}}</li>
+</ul>

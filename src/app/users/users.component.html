@@ -1,3 +1,7 @@
 <a routerLink="/">Home</a><br><br>
-
-<app-user-detail *ngFor="let user of users" [user]="user"></app-user-detail>
+<!--
+     Passagem de parametro para o componente
+- Se o parametro eh uma string n eh necessario o uso dos [] (ex: user="Fulano")
+- Se o parametro nao eh uma string, eh necessario o uso dos [], pois eh feito um binding da variavel temporaria "u" para a propriedade de Input "user" do lado do componente user-detail 
+-->
+<app-user-detail *ngFor="let u of users" [user]="u"></app-user-detail>

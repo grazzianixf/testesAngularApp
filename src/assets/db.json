@@ -1,13 +1,12 @@
 {
     "users" : [
-        {"id": 1, "name": "Fulano", "pay": 3500.23,
-            "roles": [
-                "guest"
-            ]},
-        {"id": 2, "name": "Cicrano", "pay": 3495.99,
-            "roles": [
-                "guest", "manager"
-            ]},
+        {"id": 1, "name": "Fulano", "pay": 3500.23},
+        {"id": 2, "name": "Cicrano", "pay": 3495.99},
         {"id": 3, "name": "Beltrano"}
+    ],
+    "roles" : [
+        { "id": 1, "userId": 1, "name": "guest" },
+        { "id": 1, "userId": 3, "name": "guest" },
+        { "id": 1, "userId": 3, "name": "manager" }
     ]
 }
