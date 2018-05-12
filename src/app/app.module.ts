@@ -11,11 +11,18 @@ import { UserComponent } from './users/user/user.component';
 import { UserService } from './users/user.service';
 import { HomeComponent } from './home/home.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { RolesComponent } from './users/user/roles/roles.component';
+import { ToDosComponent } from './users/user/to-dos/to-dos.component';
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'user/:id', component: UserComponent},
+  {path: 'user/:id', component: UserComponent,
+    children: [
+      {path: '', redirectTo: 'roles', pathMatch: 'full'},
+      {path: 'roles', component: RolesComponent},
+      {path: 'todos', component: ToDosComponent}
+    ]},
   {path: 'templateForms', component: TemplateFormComponent}
 ]
 
@@ -26,7 +33,9 @@ export const ROUTES: Routes = [
     UserDetailComponent,
     UserComponent,
     HomeComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    RolesComponent,
+    ToDosComponent
   ],
   imports: [
     BrowserModule,

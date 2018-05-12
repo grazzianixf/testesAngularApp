@@ -4,3 +4,11 @@
 
 <!-- Com o Pipe (|) é feita a transformação do objeto para notação Json -->
 json: {{user | json}}
+<br>
+<br>
+<!-- Rotas relativas não colocamos "/" na frente, senao vai ser entendido que é uma rota a partir da raiz -->
+<a [routerLink]="['roles']" routerLinkActive="active-link">roles</a>
+ | 
+<a [routerLink]="['todos']" routerLinkActive="active-link">TODOs</a>
+<br>
+<router-outlet></router-outlet>

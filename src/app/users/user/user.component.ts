@@ -7,7 +7,8 @@ import { User } from '../user';
 
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html'
+  templateUrl: './user.component.html',
+  styles: ['.active-link {   color: inherit; text-decoration: inherit;}']
 })
 export class UserComponent implements OnInit {
 
