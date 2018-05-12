@@ -10,11 +10,13 @@ import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { UserComponent } from './users/user/user.component';
 import { UserService } from './users/user.service';
 import { HomeComponent } from './home/home.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'user/:id', component: UserComponent}
+  {path: 'user/:id', component: UserComponent},
+  {path: 'templateForms', component: TemplateFormComponent}
 ]
 
 @NgModule({
@@ -23,7 +25,8 @@ export const ROUTES: Routes = [
     UsersComponent,
     UserDetailComponent,
     UserComponent,
-    HomeComponent
+    HomeComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

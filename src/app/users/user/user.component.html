@@ -4,37 +4,3 @@
 
 <!-- Com o Pipe (|) é feita a transformação do objeto para notação Json -->
 json: {{user | json}}
-<br>
-<!-- "?" - informa que "user" é opcional, portanto so processo o que vier a seguir qdo ele tiver conteudo -->
-<!-- | currency : 'BRL' : 'symbol' - O Pipe seguindo de currency formata o valor segundo os parametros informados -->
-pay: {{user?.pay | currency : 'BRL' : 'symbol'}}
-
-<br>
-<br>
-
-<!-- novalidate - Desabilita a validacao de formularios dos browsers -->
-<!-- #formUser="ngForm" - Template variable que Nomeia o form para o Angular -->
-<form #formUser="ngForm" novalidate >
-    <!-- [ngModel]="user.name" - binding do modelo de dados no Angular para o elemento html  -->
-    <!-- #iptNameUser="ngModel" - Template Variable que permite acessar informacoes de estado do componente na tela -->
-    name: <input type="text" name="name" [ngModel]="user?.name" #iptNameUser="ngModel" minlength="3" required>
-    <span style="color: red" *ngIf="iptNameUser.invalid">name invalid</span>
-    <br>
-    pay: <input type="text" name="pay" [ngModel]="user?.pay" minlength="1" required 
-            #inputPay="ngModel" [class.has-success]="inputPay.valid">
-    <br>
-    <br>
-    <button [disabled]="formUser.invalid" >Salvar</button>
-</form>
-
-<br>
-<br>
-formUser.valid: {{formUser.valid}}
-<br>
-formUser.value: {{formUser.value | json}}
-<br>
-iptNameUser.valid: {{iptNameUser.valid}} <!-- esse acesso eh permitido por conta do #iptNameUser="ngModel" -->
-<br>
-iptNameUser.alterado: {{iptNameUser.dirty}}
-<br>
-iptNameUser.acessadoEDepoisSaiuFoco: {{iptNameUser.touched}}
