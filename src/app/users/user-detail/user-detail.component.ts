@@ -5,8 +5,7 @@ import { User } from '../user';
 
 @Component({
   selector: 'app-user-detail',
-  templateUrl: './user-detail.component.html',
-  styleUrls: ['./user-detail.component.css']
+  templateUrl: './user-detail.component.html'
 })
 export class UserDetailComponent implements OnInit {
 
