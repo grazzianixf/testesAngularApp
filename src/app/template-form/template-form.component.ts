@@ -22,4 +22,7 @@ export class TemplateFormComponent implements OnInit {
     )
   }  
 
+  click(formUser) {
+    console.log(formUser.value)
+  }
 }

@@ -23,7 +23,7 @@ pay: {{user?.pay | currency : 'BRL' : 'symbol'}}
     pay: <input type="text" name="pay" [ngModel]="user?.pay" minlength="1" required >
     <br>
     <br>
-    <button [disabled]="formUser.invalid" >Salvar</button>
+    <button [disabled]="formUser.invalid" (click)="click(formUser)" >Salvar</button>
 </form>
 
 <br>
